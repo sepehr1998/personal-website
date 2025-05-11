@@ -1,103 +1,91 @@
-import Image from "next/image";
+import React from "react";
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub } from "react-icons/fa";
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql } from "react-icons/si";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      <main className="min-h-screen w-full bg-gradient-to-br from-zinc-900 to-black text-white font-sans">
+        <section className="relative flex flex-col items-center justify-center h-screen text-center px-4">
+          <div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+              Hi, I’m Sepehr Samadi
+            </h1>
+            <p className="mt-6 text-lg md:text-xl max-w-2xl">
+              Senior Frontend Engineer with 8+ years of experience crafting elegant, performant, and scalable web applications.
+            </p>
+          </div>
+          <div className="absolute bottom-10 animate-bounce text-purple-500">
+            <span>▼</span>
+          </div>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        {/* Projects Showcase */}
+        <section className="py-24 px-6 bg-zinc-800">
+          <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((project) => (
+                <div
+                    key={project}
+                    className="bg-zinc-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition"
+                >
+                  <div className="h-40 bg-zinc-700 rounded-xl mb-4"></div>
+                  <h3 className="text-xl font-semibold mb-2">Project Title</h3>
+                  <p className="text-sm text-gray-400">Short project description goes here. Mention tech used and impact.</p>
+                </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Brands Trusted Section */}
+        <section className="py-24 px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">Trusted By</h2>
+          <div className="flex flex-wrap justify-center gap-10">
+            {["Google", "Amazon", "Spotify", "Airbnb"].map((brand) => (
+                <div
+                    key={brand}
+                    className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500"
+                >
+                  {brand}
+                </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section className="py-24 px-6 bg-zinc-800">
+          <h2 className="text-4xl font-bold text-center mb-12">Skill Set</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 justify-items-center text-5xl">
+            <FaReact title="React" className="text-cyan-400" />
+            <SiNextdotjs title="Next.js" className="text-white" />
+            <FaNodeJs title="Node.js" className="text-green-500" />
+            <FaHtml5 title="HTML5" className="text-orange-500" />
+            <FaCss3Alt title="CSS3" className="text-blue-500" />
+            <FaJs title="JavaScript" className="text-yellow-400" />
+            <SiTypescript title="TypeScript" className="text-blue-400" />
+            <SiTailwindcss title="TailwindCSS" className="text-teal-300" />
+            <SiGraphql title="GraphQL" className="text-pink-500" />
+            <FaGithub title="GitHub" className="text-gray-300" />
+          </div>
+        </section>
+
+        {/* Extras: Contact or Call to Action */}
+        <section className="py-24 px-6 text-center">
+          <h2
+              initial={{ opacity: 0, y: 20 }}
+              transition={{ duration: 1 }}
+              className="text-4xl font-bold mb-6"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+            Let’s Build Something Awesome Together
+          </h2>
+          <p className="text-gray-400 mb-6">Reach out if you’re looking for a reliable, creative, and experienced frontend partner.</p>
+          <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:opacity-90">
+            Get in Touch
+          </button>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
   );
 }
