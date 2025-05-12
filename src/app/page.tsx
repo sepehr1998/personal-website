@@ -6,11 +6,7 @@ export default function HomePage() {
   return (
       <main className="min-h-screen w-full bg-gradient-to-br from-zinc-900 to-black text-white font-sans">
         <section className="relative flex flex-col items-center justify-center h-screen text-center px-4">
-          <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-          >
+          <div>
             <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
               Hi, I’m Sepehr Samadi
             </h1>
@@ -75,8 +71,6 @@ export default function HomePage() {
         {/* Extras: Contact or Call to Action */}
         <section className="py-24 px-6 text-center">
           <h2
-              initial={{ opacity: 0, y: 20 }}
-              transition={{ duration: 1 }}
               className="text-4xl font-bold mb-6"
           >
             Let’s Build Something Awesome Together
