@@ -1,5 +1,6 @@
 import React from "react";
-import {FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinkedin} from "react-icons/fa";
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaUser, FaProjectDiagram, FaHandshake, FaTools, FaEnvelope, FaLinkedin } from "react-icons/fa";
+
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql } from "react-icons/si";
 import Image from "next/image";
 
@@ -11,38 +12,53 @@ export default function HomePage() {
                 <div className="w-24 h-24 mb-6 mt-6 rounded-full overflow-hidden border-4 border-purple-500">
                     <Image
                         src="/images/sepehr.jpg"
-                        alt="Your Name"
+                        alt="Sepehr Samadi"
                         width={96}
                         height={96}
                         className="object-cover"
                     />
                 </div>
-                <div className="border-t border-zinc-800 w-full mt-6 mb-6"></div>
-                <nav className="flex flex-col gap-4 w-full text-center text-lg font-medium mt-4">
-                    <div className="flex flex-col gap-4">
-                        {[
-                            { href: "#about", label: "About" },
-                            { href: "#projects", label: "Projects" },
-                            { href: "#brands", label: "Trusted By" },
-                            { href: "#skills", label: "Skills" },
-                            { href: "#contact", label: "Contact" }
-                        ].map(({ href, label }) => (
-                            <a
-                                key={href}
-                                href={href}
-                                className="px-4 py-2 rounded-lg hover:bg-purple-900 hover:text-purple-300 transition-colors duration-300 ease-in-out shadow hover:shadow-md"
-                            >
-                                {label}
-                            </a>
-                        ))}
-                    </div>
-                </nav>
+                <div className="border-t border-zinc-800 w-full mt-6 mb-8"></div>
+                <div className="text-left">
+                    <nav className="flex flex-col gap-6 w-full text-lg font-medium">
+                        <a href="#about" className="hover:text-purple-400 transition flex items-center">
+                            <span className="w-12 flex justify-center"><FaUser /></span> About
+                        </a>
+                        <a href="#projects" className="hover:text-purple-400 transition flex items-center">
+                            <span className="w-12 flex justify-center"><FaProjectDiagram /></span> Projects
+                        </a>
+                        <a href="#brands" className="hover:text-purple-400 transition flex items-center">
+                            <span className="w-12 flex justify-center"><FaHandshake /></span> Trusted By
+                        </a>
+                        <a href="#skills" className="hover:text-purple-400 transition flex items-center">
+                            <span className="w-12 flex justify-center"><FaTools /></span> Skills
+                        </a>
+                        <a href="#contact" className="hover:text-purple-400 transition flex items-center">
+                            <span className="w-12 flex justify-center"><FaEnvelope /></span> Contact
+                        </a>
+                    </nav>
+                </div>
 
+                <div className="mt-8">
+                    <a
+                        href="/cv.pdf"
+                        download
+                        className="relative mt-4 group inline-flex items-center justify-center px-5 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full text-white font-bold shadow-lg hover:shadow-purple-700 transition-all duration-300 overflow-hidden"
+                    >
+                        <span className="absolute inset-0 bg-white opacity-10 blur-sm group-hover:animate-pulse" />
+                        <span className="relative z-10 flex items-center gap-2">
+                            <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
+                            </svg>
+                            Download CV
+                        </span>
+                    </a>
+                </div>
                 <div className="flex gap-4 mt-auto">
-                    <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/sepehr1998" target="_blank" rel="noopener noreferrer">
                         <FaGithub className="text-white text-2xl hover:text-purple-400 transition" />
                     </a>
-                    <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/in/sepehr-samadi" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin className="text-white text-2xl hover:text-purple-400 transition" />
                     </a>
                 </div>
