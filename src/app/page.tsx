@@ -1,8 +1,9 @@
-import React from "react";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaUser, FaProjectDiagram, FaHandshake, FaTools, FaEnvelope, FaLinkedin } from "react-icons/fa";
+import React from "react"
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaUser, FaProjectDiagram, FaHandshake, FaTools, FaEnvelope, FaLinkedin } from "react-icons/fa"
 
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql } from "react-icons/si";
-import Image from "next/image";
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql } from "react-icons/si"
+import Image from "next/image"
+import projects from "../data/projects"
 
 export default function HomePage() {
     return (
@@ -84,13 +85,13 @@ export default function HomePage() {
                 <section id="projects" className="py-24 px-6 bg-zinc-800">
                     <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[1, 2, 3].map((project) => (
+                        {projects.map((project) => (
                             <div
-                                key={project}
+                                key={project.id}
                                 className="bg-zinc-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
                             >
                                 <div className="h-40 bg-zinc-700 rounded-xl mb-4"></div>
-                                <h3 className="text-xl font-semibold mb-2">Project Title</h3>
+                                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                                 <p className="text-sm text-gray-400">Short project description goes here. Mention tech used and impact.</p>
                             </div>
                         ))}
