@@ -3,9 +3,10 @@ import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaUser, FaProjec
 
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql } from "react-icons/si"
 import Image from "next/image"
-import projects from "../data/projects"
+import ProjectSection from "@/components/projects/ProjectsSection"
 
 export default function HomePage() {
+    const trustedBrands = ["Neste","Metacore Games", "Optiphase Drive Systems", "Infinity Miles", "Maraya Qatar", "Pandtec"]
     return (
         <main className="min-h-screen flex bg-gradient-to-br from-zinc-900 to-black text-white font-sans">
             {/* Sidebar */}
@@ -81,28 +82,13 @@ export default function HomePage() {
                     </div>
                 </section>
 
-                {/* Projects Showcase */}
-                <section id="projects" className="py-24 px-6 bg-zinc-800">
-                    <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {projects.map((project) => (
-                            <div
-                                key={project.id}
-                                className="bg-zinc-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
-                            >
-                                <div className="h-40 bg-zinc-700 rounded-xl mb-4"></div>
-                                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                                <p className="text-sm text-gray-400">Short project description goes here. Mention tech used and impact.</p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                <ProjectSection/>
 
                 {/* Brands Trusted Section */}
                 <section id="brands" className="py-24 px-6">
                     <h2 className="text-4xl font-bold text-center mb-12">Trusted By</h2>
                     <div className="flex flex-wrap justify-center gap-10">
-                        {["Google", "Amazon", "Spotify", "Airbnb"].map((brand) => (
+                        {trustedBrands.map((brand) => (
                             <div
                                 key={brand}
                                 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500"
