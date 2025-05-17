@@ -13,7 +13,7 @@ export default function HomePage() {
             <aside className="w-64 bg-gradient-to-b from-zinc-950 to-zinc-800 border-r border-zinc-800 p-6 flex flex-col items-center fixed top-0 left-0 h-screen z-50">
                 <div className="w-24 h-24 mb-6 mt-6 rounded-full overflow-hidden border-4 border-purple-500">
                     <Image
-                        src="/images/sepehr.jpg"
+                        src="/sepehr.png"
                         alt="Sepehr Samadi"
                         width={96}
                         height={96}

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d out -r https://github.com/sepehr1998/personal-website.git"
   },
   "dependencies": {
     "framer-motion": "^12.10.5",
@@ -24,6 +25,7 @@
     "eslint": "^9.26.0",
     "eslint-config-next": "15.3.2",
     "eslint-webpack-plugin": "^5.0.1",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

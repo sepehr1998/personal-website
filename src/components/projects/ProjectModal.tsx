@@ -2,9 +2,9 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import Image from "next/image"
+import type { Project } from "@/types";
 
-
-export default function ProjectModal({ project, onClose }: { project: any; onClose: () => void }) {
+export default function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
     if (!project) return null;
 
     return (
