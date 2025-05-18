@@ -1,15 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig: import('next').NextConfig = {
+    trailingSlash: false,
+    images: {
+        unoptimized: false, // Let Vercel handle image optimization
+    },
 };
 
-const isProd = process.env.NODE_ENV === 'production';
-
-module.exports = {
-    output: 'export',
-    basePath: isProd ? '/personal-portfolio' : '',
-    assetPrefix: isProd ? '/personal-portfolio/' : '',
-};
-
-export default nextConfig;
+module.exports = nextConfig;
