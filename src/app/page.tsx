@@ -1,8 +1,7 @@
 import React from "react"
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaUser, FaProjectDiagram, FaHandshake, FaTools, FaEnvelope, FaLinkedin } from "react-icons/fa"
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub } from "react-icons/fa"
 
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql } from "react-icons/si"
-import Image from "next/image"
 import ProjectSection from "@/components/projects/ProjectsSection"
 import Sidebar from "@/components/sidebar";
 
