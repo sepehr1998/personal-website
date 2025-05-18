@@ -30,7 +30,7 @@ const projects = [
         id: 4,
         title: "Kimia Polymer Apadana",
         description: "Fully featured chat app with socket.io, themes, and media sharing.",
-        image: "/images/projects/chat.jpg",
+        image: "/images/projects/kpa.png",
         video: "/videos/projects/chat.mp4",
         url: "https://kpa-compound.com/en/",
         categories: ["Company Portfolio"]
@@ -39,7 +39,7 @@ const projects = [
         id: 5,
         title: "Maraya Qatar",
         description: "A sleek, dark-themed portfolio template for designers and creatives.",
-        image: "/images/projects/template.jpg",
+        image: "/images/projects/maraya.png",
         video: "/videos/projects/template.mp4",
         url: "https://marayaqatar.com/",
         categories: ["Company Portfolio"]
@@ -48,7 +48,7 @@ const projects = [
         id: 6,
         title: "Pandtec",
         description: "A conversion-focused landing page with GSAP animations and scroll effects.",
-        image: "/images/projects/landing.jpg",
+        image: "/images/projects/pandtec.png",
         video: "/videos/projects/landing.mp4",
         url: "https://www.en.pandtec.com/",
         categories: ["Company Portfolio"]
