@@ -43,7 +43,7 @@ export default function HomePage() {
 
                 <div className="mt-8">
                     <a
-                        href="/cv.pdf"
+                        href="/Sepehr-Samadi-CV.pdf"
                         download
                         className="relative mt-4 group inline-flex items-center justify-center px-5 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full text-white font-bold shadow-lg hover:shadow-purple-700 transition-all duration-300 overflow-hidden"
                     >
