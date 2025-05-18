@@ -40,7 +40,7 @@ export default function HomePage() {
                         {trustedBrands.map((brand) => (
                             <div
                                 key={brand}
-                                className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500"
+                                className="text-2xl font-bold text-center w-full sm:w-auto flex justify-center text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500"
                             >
                                 {brand}
                             </div>
@@ -52,18 +52,31 @@ export default function HomePage() {
                 <section id="skills" className="py-24 px-6 bg-zinc-800">
                     <h2 className="text-4xl font-bold text-center mb-12">Skill Set</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-10 justify-items-center text-5xl">
-                        <FaReact title="React" className="text-cyan-400" />
-                        <SiNextdotjs title="Next.js" className="text-white" />
-                        <FaNodeJs title="Node.js" className="text-green-500" />
-                        <FaHtml5 title="HTML5" className="text-orange-500" />
-                        <FaCss3Alt title="CSS3" className="text-blue-500" />
-                        <FaJs title="JavaScript" className="text-yellow-400" />
-                        <SiTypescript title="TypeScript" className="text-blue-400" />
-                        <SiTailwindcss title="TailwindCSS" className="text-teal-300" />
-                        <SiGraphql title="GraphQL" className="text-pink-500" />
-                        <FaGithub title="GitHub" className="text-gray-300" />
+                        {[
+                            { icon: <FaReact className="text-cyan-400" />, name: "React" },
+                            { icon: <SiNextdotjs className="text-white" />, name: "Next.js" },
+                            { icon: <FaNodeJs className="text-green-500" />, name: "Node.js" },
+                            { icon: <FaHtml5 className="text-orange-500" />, name: "HTML5" },
+                            { icon: <FaCss3Alt className="text-blue-500" />, name: "CSS3" },
+                            { icon: <FaJs className="text-yellow-400" />, name: "JavaScript" },
+                            { icon: <SiTypescript className="text-blue-400" />, name: "TypeScript" },
+                            { icon: <SiTailwindcss className="text-teal-300" />, name: "Tailwind" },
+                            { icon: <SiGraphql className="text-pink-500" />, name: "GraphQL" },
+                            { icon: <FaGithub className="text-gray-300" />, name: "GitHub" },
+                        ].map(({ icon, name }) => (
+                            <div
+                                key={name}
+                                className="flex flex-col items-center group transition transform hover:scale-105 hover:shadow-lg"
+                            >
+                                <div className="text-5xl mb-2">{icon}</div>
+                                <span className="text-sm font-semibold text-white opacity-70 group-hover:opacity-100 group-hover:text-purple-400 transition duration-300">
+                                  {name}
+                                </span>
+                            </div>
+                        ))}
                     </div>
                 </section>
+
 
                 {/* Contact Section */}
                 <section id="contact" className="py-24 px-6 text-center">

@@ -27,7 +27,7 @@ export default function ContactModal({ isOpen, onCloseAction }: ContactModalProp
         <div
             aria-modal="true"
             role="dialog"
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 animate-fade-in flex justify-center items-center z-100"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 animate-fade-in flex justify-center items-center"
             onClick={onCloseAction}
         >
             <div
