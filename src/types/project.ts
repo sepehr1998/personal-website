@@ -3,5 +3,6 @@ export interface Project {
     description: string
     image: string
     video: string
+    url: string
     categories: string[]
 }
