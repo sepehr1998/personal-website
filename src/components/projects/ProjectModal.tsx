@@ -8,7 +8,7 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
     if (!project) return null;
 
     return (
-        <div className="modal-overlay fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
+        <div className="modal-overlay fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm z-50 animate-fade-in">
             <div className="modal-content bg-zinc-800 rounded-xl p-8 max-w-4xl w-full relative shadow-lg">
                 <button
                     onClick={onClose}
