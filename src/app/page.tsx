@@ -1,13 +1,18 @@
-import React from "react"
+"use client"
+import React, {useState} from "react"
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGithub } from "react-icons/fa"
 
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiGraphql } from "react-icons/si"
 import ProjectSection from "@/components/projects/ProjectsSection"
-import Sidebar from "@/components/sidebar";
+import Sidebar from "@/components/Sidebar";
+import ContactModal from "@/components/ContactModal";
 
 export default function HomePage() {
     const trustedBrands = ["Neste","Metacore Games", "Optiphase Drive Systems", "Infinity Miles", "Maraya Qatar", "Pandtec"]
+    const [contactModalOpen, setContactModalOpen] = useState(false);
+
     return (
+        <>
         <main className="h-screen flex bg-gradient-to-br from-zinc-900 to-black text-white font-sans overflow-hidden">
             <Sidebar/>
             {/* Main Content */}
@@ -66,11 +71,15 @@ export default function HomePage() {
                         Let’s Build Something Awesome Together
                     </h2>
                     <p className="text-gray-400 mb-6">Reach out if you’re looking for a reliable, creative, and experienced frontend partner.</p>
-                    <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:opacity-90">
+                    <button
+                        onClick={() => setContactModalOpen(true)}
+                        className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:opacity-90">
                         Get in Touch
                     </button>
                 </section>
             </div>
         </main>
-    );
+        <ContactModal isOpen={contactModalOpen} onCloseAction={() => setContactModalOpen(false)} />
+    </>
+);
 }
