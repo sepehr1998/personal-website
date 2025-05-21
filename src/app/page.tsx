@@ -30,6 +30,11 @@ export default function HomePage() {
                         <span>▼</span>
                     </div>
                 </section>
+                <div className="w-full overflow-hidden leading-none -mb-1">
+                    <svg viewBox="0 0 1440 100" className="w-full h-[80px]" preserveAspectRatio="none">
+                        <path fill="#27272a" d="M0,100 C480,-20 960,120 1440,0 L1440,100 L0,100 Z" />
+                    </svg>
+                </div>
 
                 <ProjectSection/>
 
@@ -47,9 +52,13 @@ export default function HomePage() {
                         ))}
                     </div>
                 </section>
-
+                <div className="w-full overflow-hidden leading-none rotate-180 -mb-1">
+                    <svg viewBox="0 0 1440 100" className="w-full h-[80px]" preserveAspectRatio="none">
+                        <path fill="#27272a" d="M0,0 C480,120 960,-20 1440,100 L1440,0 L0,0 Z" />
+                    </svg>
+                </div>
                 {/* Skills Section */}
-                <section id="skills" className="py-24 px-6 bg-zinc-800">
+                <section id="skills" className="pb-24 px-6 bg-zinc-800">
                     <h2 className="text-4xl font-bold text-center mb-12">Skill Set</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-10 justify-items-center text-5xl">
                         {[
@@ -69,7 +78,7 @@ export default function HomePage() {
                                 className="flex flex-col items-center group transition transform hover:scale-105 hover:shadow-lg"
                             >
                                 <div className="text-5xl mb-2">{icon}</div>
-                                <span className="text-sm font-semibold text-white opacity-70 group-hover:opacity-100 group-hover:text-purple-400 transition duration-300">
+                                <span className="text-sm font-semibold text-white opacity-70 group-hover:opacity-100 group-hover:animate-pulse transition">
                                   {name}
                                 </span>
                             </div>

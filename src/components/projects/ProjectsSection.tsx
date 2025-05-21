@@ -20,7 +20,7 @@ export default function ProjectSection() {
     };
     return (
         <div>
-            <section id="projects" className="py-24 px-6 bg-zinc-800">
+            <section id="projects" className="pb-24 px-6 bg-zinc-800">
                 <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {projects.map((project) => (

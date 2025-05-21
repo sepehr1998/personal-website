@@ -40,8 +40,8 @@ export default function ProjectModal({ project, onClose }: { project: Project; o
                     />
                     <video
                         src={project.video}
-                        controls
                         className="absolute top-[10%] left-[9%] w-[82%] h-[60%] object-cover rounded-md"
+                        autoPlay
                     />
                 </div>
             )}

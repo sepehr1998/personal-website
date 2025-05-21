@@ -4,7 +4,7 @@ const projects = [
         title: "Optiphase Drive Systems",
         description: "A clean, modern portfolio site showcasing next-gen 5-phase electric power and propulsion technology for industrial and EV applications.",
         image: "/images/projects/opti.png",
-        video: "/videos/projects/ai-assistant.mp4",
+        video: "/videos/projects/opti.mp4",
         url: "https://optiphasedrive.com/",
         categories: ["Company Portfolio"]
     },
@@ -13,7 +13,7 @@ const projects = [
         title: "Infinity Miles",
         description: "A sleek company portfolio highlighting breakthrough, cost-effective solid-state transformer (SST) technology built for scalable, modern power infrastructure.",
         image: "/images/projects/infmiles.png",
-        video: "/videos/projects/dashboard.mp4",
+        video: "/videos/projects/infmiles.mp4",
         url: "https://infmiles.com/",
         categories: ["Company Portfolio"]
     },
